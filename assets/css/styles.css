@@ -41,7 +41,7 @@ p {
 
 .wrapper {
   background: #42A8C0;
-  max-width: 960px;
+  max-width: 1000px;
   margin: 0 auto;
   position: relative;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -51,9 +51,9 @@ p {
   background: #42A8C0;
   position: absolute;
   right: 0;
-  width: 240px;
+  width: 280px;
   height: 100%;
-  min-height: 800px;
+  min-height: 700px;
   color: #fff;
 }
 .sidebar-wrapper a {
@@ -80,7 +80,7 @@ p {
   margin-bottom: 0;
 }
 .sidebar-wrapper .profile {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 .sidebar-wrapper .contact-list .svg-inline--fa {
   margin-right: 5px;
@@ -154,12 +154,12 @@ p {
 .main-wrapper {
   background: #fff;
   padding: 60px;
-  padding-right: 300px;
+  padding-right: 340px;
 }
 .main-wrapper .section-title {
   text-transform: uppercase;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
   color: #2d7788;
   position: relative;
   margin-top: 0;
@@ -259,6 +259,10 @@ p {
 }
 .footer .fa-heart {
   color: #fb866a;
+}
+
+.summary p {
+  margin-bottom: 0.5rem;
 }
 
 @media (max-width: 767.98px) {
