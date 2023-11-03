@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MyItinerary - Crie e explore centenas de itinerários</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <meta name="author" content="Tomás Russo">
+    <meta name="description" content="Crie o seu itinerário no MyItinerary e partilhe a sua viagem com outros Exploradores">
+    <meta name="theme-color" content="#40916c">
+
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="./css/fontawesome/css/all.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <!-- Menu e Banner -->
+    <div class="menu menu-home">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-auto logo align-self-center">
+                    <a href=".">
+                        <img src="./images/logo-branco.svg" class="logo-shadow" alt="MyItinerary" height="36px">
+                    </a>
+                </div>
+
+                    <!-- Navbar Guest -->
+                    <div class="col-auto options">
+                        <nav>
+                            <ul>
+                                <li><a href="./signin.html" class="btn btn-link menu-md-hide">Registar-me</a></li>
+                                <li><a href="./login.html" class="btn btn-primary">Iniciar sessão</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner">
+        <div class="container-fluid">
+            <div id="carousel-banner" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" style="background-image: url('./images/darken100.png'), url('./images/gaia.jpg');">
+                        <div class="title row align-items-center">
+                            <div class="city text-center">
+                                <h1 id="title">Vila Nova de Gaia</h1>
+                                <h3 id="description">Cidade das Caves de Vinho do Porto</h3>
+                                <a href="./explore.html" class="btn btn-secondary text-white" id="button">Explorar Vila Nova de Gaia</a>
+                            </div>
+                        </div>
+                        <div class="row credits">
+                            <p>Foto de Pedro de Sousa no Unsplash</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item" style="background-image: url('./images/darken100.png'), url('./images/vila-franca-campo.jpg');">
+                        <div class="title row align-items-center">
+                            <div class="city text-center">
+                                <h1 id="title">Vila Franca do Campo</h1>
+                                <h3 id="description">Pequena vila em S. Miguel, Açores</h3>
+                                <a href="./explore.html" class="btn btn-secondary text-white" id="button">Explorar Açores</a>
+                            </div>
+                        </div>
+                        <div class="row credits">
+                            <p>Foto de Svetlana Shemetiuk no Pexels</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item" style="background-image: url('./images/darken100.png'), url('./images/matosinhos.png');">
+                        <div class="title row align-items-center">
+                            <div class="city text-center">
+                                <h1 id="title">Matosinhos</h1>
+                                <h3 id="description">Cidade de surf e peixe</h3>
+                                <a href="./explore.html" class="btn btn-secondary text-white" id="button">Explorar Matosinhos</a>
+                            </div>
+                        </div>
+                        <div class="row credits">
+                            <p>Foto de Câmara Municipal de Matosinhos</p>
+                        </div>
+                    </div>     
+                    
+                    <div class="carousel-item" style="background-image: url('./images/darken100.png'), url('./images/sintra.jpg');">
+                        <div class="title row align-items-center">
+                            <div class="city text-center">
+                                <h1 id="title">Sintra</h1>
+                                <h3 id="description">Património da Humanidade da UNESCO</h3>
+                                <a href="./explore.html" class="btn btn-secondary text-white" id="button">Explorar Sintra</a>
+                            </div>
+                        </div>
+                        <div class="row credits">
+                            <p>Foto de Daniel Frese no Pexels</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item" style="background-image: url('./images/darken100.png'), url('./images/ilhavo.jpg');">
+                        <div class="title row align-items-center">
+                            <div class="city text-center">
+                                <h1 id="title">Ílhavo</h1>
+                                <h3 id="description">Cidade dos Palheiros da Costa Nova</h3>
+                                <a href="./explore.html" class="btn btn-secondary text-white" id="button">Explorar Ílhavo</a>
+                            </div>
+                        </div>
+                        <div class="row credits">
+                            <p>Foto de Hector Martinez no Unsplash</p>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-item" style="background-image: url('./images/darken100.png'), url('./images/sortelha.jpg');">
+                        <div class="title row align-items-center">
+                            <div class="city text-center">
+                                <h1 id="title">Sortelha</h1>
+                                <h3 id="description">Aldeia histórica na Guarda</h3>
+                                <a href="./explore.html" class="btn btn-secondary text-white" id="button">Explorar Guarda</a>
+                            </div>
+                        </div>
+                        <div class="row credits">
+                            <p>Foto de Yolka17 no Reddit (r/Portugal)</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item" style="background-image: url('./images/darken100.png'), url('./images/aveiro.jpg');">
+                        <div class="title row align-items-center">
+                            <div class="city text-center">
+                                <h1 id="title">Aveiro</h1>
+                                <h3 id="description">A Veneza Portuguesa</h3>
+                                <a href="./explore.html" class="btn btn-secondary text-white" id="button">Explorar Aveiro</a>
+                            </div>
+                        </div>
+                        <div class="row credits">
+                            <p>Foto de Ricardo Resende no Unsplah</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item" style="background-image: url('./images/darken100.png'), url('./images/nazare.jpg');">
+                        <div class="title row align-items-center">
+                            <div class="city text-center">
+                                <h1 id="title">Nazaré</h1>
+                                <h3 id="description">Vila de surf em Leiria</h3>
+                                <a href="./explore.html" class="btn btn-secondary text-white" id="button">Explorar Leiria</a>
+                            </div>
+                        </div>
+                        <div class="row credits">
+                            <p>Foto de Helio Dilolwa no Unsplash</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Explorar -->
+    <div class="explore-home" id="explore">
+        <div class="container">
+            <div class="row text-right">
+                <h3><a href="./explore.html" class="link">Explorar</a></h3>
+            </div>
+            <div class="row itin-cards justify-content-start">
+                <div class="col-12 col-md-6 col-xl-3">
+                    <div class="card">
+                        <!-- Link para itinerário -->
+                        <a href="./itinerary.html" class="a-card" title="Fim de semana na Invicta"> 
+                            <div class="card-img-top" style="background-image: url('./images/porto.jpg');"></div>
+                        </a>
+                        <div class="card-img-overlay d-flex justify-content-end">
+                            <button class="btn shadow-none" title="Gosto deste itinerário" data-bs-toggle="modal" data-bs-target="#register"><i class="fas fa-heart"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <div class="info card-text">
+                                <div class="location">PORTO</div>
+                                <div class="duration">&nbsp;&middot;&nbsp;2 DIAS</div>
+                            </div>
+                            <!-- Link para itinerário -->
+                            <a href="./itinerary.html" class="a-card" title="Fim de semana na Invicta"> 
+                                <h5 class="card-title">Fim de semana na Invicta</h5>
+                            </a>
+                            <div class="author card-text">
+                                <!-- Link para perfil -->
+                                <div class="author-name"><a href="./profile.html" class="a-card" title="Tomás Russo">Tomás Russo</a><i style="font-size: 0.75rem; margin-left: 5px; margin-right: 2px !important; color: #212529;" class="fas fa-check-circle" title="Perfil verificado"></i></div>
+                                <div class="date">&nbsp;&middot;&nbsp;Há 6 horas</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-3">
+                    <div class="card">
+                        <!-- Link para itinerário -->
+                        <a href="./itinerary.html" class="a-card" title="Roteiro pelas Marisqueiras de Matosinhos"> 
+                            <div class="card-img-top" style="background-image: url('./images/matosinhos2.jpg"></div>
+                        </a>
+                        <div class="card-img-overlay d-flex justify-content-end">
+                            <button class="btn shadow-none" title="Gosto deste itinerário" data-bs-toggle="modal" data-bs-target="#register"><i class="fas fa-heart"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <div class="info card-text">
+                                <div class="location">MATOSINHOS</div>
+                                <div class="duration">&nbsp;&middot;&nbsp;1 DIA</div>
+                            </div>
+                            <!-- Link para itinerário -->
+                            <a href="./itinerary.html" class="a-card" title="Roteiro pelas Marisqueiras de Matosinhos"> 
+                                <h5 class="card-title">Roteiro pelas Marisqueiras de Matosinhos</h5>
+                            </a>
+                            <div class="author card-text">
+                                <!-- Link para perfil -->
+                                <div class="author-name"><a href="./profile.html" class="a-card" title="Tomás Russo">Tomás Russo</a><i style="font-size: 0.75rem; margin-left: 5px; margin-right: 2px !important; color: #212529;" class="fas fa-check-circle" title="Perfil verificado"></i></div>
+                                <div class="date">&nbsp;&middot;&nbsp;Há 12 dias</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-3">
+                    <div class="card">
+                        <!-- Link para itinerário -->
+                        <a href="./itinerary.html" class="a-card" title="N2 - de Chaves a Faro em 6 dias"> 
+                            <div class="card-img-top" style="background-image: url('./images/n2.png');"></div>
+                        </a>
+                        <div class="card-img-overlay d-flex justify-content-end">
+                            <button class="btn shadow-none" title="Gosto deste itinerário" data-bs-toggle="modal" data-bs-target="#register"><i class="fas fa-heart"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <div class="info card-text">
+                                <div class="location">VILA REAL, VISEU, PORTALEGRE, SANTARÉM, ÉVORA, FARO</div>
+                                <div class="duration">&nbsp;&middot;&nbsp;6 DIAS</div>
+                            </div>
+                            <!-- Link para itinerário -->
+                            <a href="./itinerary.html" class="a-card" title="N2 - de Chaves a Faro em 6 dias"> 
+                                <h5 class="card-title">N2 - de Chaves a Faro em 6 dias</h5>
+                            </a>
+                            <div class="author card-text">
+                                <!-- Link para perfil -->
+                                <div class="author-name"><a href="./profile.html" class="a-card" title="Maria Costa">Maria Costa</a></div>
+                                <div class="date">&nbsp;&middot;&nbsp;Há 4 dias </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-3">
+                    <div class="card">
+                        <!-- Link para itinerário -->
+                        <a href="./itinerary.html" class="a-card" title="Visit Porto."> 
+                            <div class="card-img-top" style="background-image: url('./images/porto3.jpg');"></div>
+                        </a>
+                        <div class="card-img-overlay d-flex justify-content-end">
+                            <button class="btn shadow-none" title="Gosto deste itinerário" data-bs-toggle="modal" data-bs-target="#register"><i class="fas fa-heart"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <div class="info card-text">
+                                <div class="location">PORTO</div>
+                                <div class="duration">&nbsp;&middot;&nbsp;3 DIAS</div>
+                            </div>
+                            <!-- Link para itinerário -->
+                            <a href="./itinerary.html" class="a-card" title="Visit Porto."> 
+                                <h5 class="card-title">Visit Porto.</h5>
+                            </a>
+                            <div class="author card-text">
+                                <!-- Link para perfil -->
+                                <div class="author-name"><a href="./profile.html" class="a-card" title="CM Porto">CM Porto</a><i style="font-size: 0.75rem; margin-left: 5px; margin-right: 2px !important; color: #212529;" class="fas fa-check-circle" title="Perfil verificado"></i></div>
+                                <div class="date">&nbsp;&middot;&nbsp;Há 9 dias</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to action Login -->
+    <div class="last">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-auto text-center">
+                    <h3>Pronto para planear a sua próxima viagem?</h3>
+                    <a href="./login.html" class="btn btn-primary">Iniciar sessão</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row justify-content-start">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5>A Minha Conta</h5>
+                    <ul>
+                        <li><a href="./login.html">Iniciar Sessão</a></li>
+                        <li><a href="./signin.html">Registar-me</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5>Explorar</h5>
+                    <ul>
+                        <li><a href="./explore.html">Explorar Itinerários</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5>Centro de Ajuda</h5>
+                    <ul>
+                        <li><a href="./help.html#about">O que é o MyItinerary?</a></li>
+                        <li><a href="./help.html#how-it-works">Como funciona o MyItinerary?</a></li>
+                        <li><a href="./help.html#faq">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row logo">
+                <div class="col align-self-center">
+                    <p>&copy; 2023 MyItinerary &middot; <a href="./terms.html" class="link">Termos e Condições</a> &middot; <a href="./policies.html" class="link">Política de Privacidade e Cookies</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade modal-itin-page" id="register" tabindex="-1" aria-labelledby="register" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row text-center title">
+                        <h1>Ainda não é um Explorador?<br>Registe-se agora!</h1>
+                        <p>Precisa de ter uma conta no MyItinerary para continuar.</p>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-auto">
+                            <a href="./signin.html" class="btn btn-primary">Registar-me</a>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <p>Já está registado? <a href="./login.html" class="link">Inicie sessão.</a></p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookies -->
+    <div class="cookies-consent alert alert-primary alert-dismissible fade fixed-bottom" id="cookie-alert" role="alert">
+        <div class="row d-flex align-items-center justify-content-between">
+            <div class="col-12 col-md-auto">
+                <p>Ao utilizar o MyItinerary, está a consentir com a nossa <a href="./policies.html#cookies" class="link">Política de Cookies</a>.</p>
+            </div>
+            <div class="col-12 col-md-auto mt-3 mt-md-0 ms-md-2">
+                <button onclick="SetCookieConsent()" type="button" class="btn btn-primary" data-bs-dismiss="alert" aria-label="Close">Entendido!</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- JS -->
+    <script src="./js/jquery/jquery-3.5.1.min.js"></script>
+    <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

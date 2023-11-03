@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Página não encontrada - MyItinerary</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <meta name="author" content="Tomás Russo">
+    <meta name="theme-color" content="#40916c">
+    <meta name="robots" content="noindex,follow">
+
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="./css/fontawesome/css/all.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <!-- Menu -->
+    <div class="menu menu-white">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-auto logo align-self-center">
+                    <a href="index.html"><img src="./images/logo-preto.svg" alt="MyItinerary" height="36px"></a>
+                </div>
+                <div class="col-auto options">
+                    <nav>
+                        <ul>
+                            <li><a href="./signin.html" class="btn btn-link btn-link-black menu-md-hide">Registar-me</a></li>
+                            <li><a href="./login.html" class="btn btn-primary">Iniciar sessão</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="not-found">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-auto text-center">
+                    <h1>404</h1>
+                    <h2>Página não encontrada :(</h2>
+                    <p style="margin-bottom: 26px">A página que procura pode ter sido movida, eliminada ou encontra-se indisponível.<br><br><br><span style="font-size: 1.2rem; font-weight: 500;"><i class="fas fa-compass"></i>Perdido? Hora de usar a bússola!</span><br>Siga para Norte, em direção à página inicial; ou vá para Sul, em busca de mais itinerários!</p>
+                </div>
+            </div>
+            <div class="row buttons justify-content-center">
+                <div class="col-auto text-center">
+                    <a href="./index.html" class="btn btn-primary me-sm-3 mb-3 mb-sm-0">N - Regressar à Página Inicial</a>
+                    <a href="./explore.html" class="btn btn-secondary mb-3 mb-sm-0">S - Explorar Itinerários</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row justify-content-start">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5>A Minha Conta</h5>
+                    <ul>
+                        <li><a href="./login.html">Iniciar Sessão</a></li>
+                        <li><a href="./signin.html">Registar-me</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5>Explorar</h5>
+                    <ul>
+                        <li><a href="./explore.html">Explorar Itinerários</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5>Centro de Ajuda</h5>
+                    <ul>
+                        <li><a href="./help.html#about">O que é o MyItinerary?</a></li>
+                        <li><a href="./help.html#how-it-works">Como funciona o MyItinerary?</a></li>
+                        <li><a href="./help.html#faq">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row logo">
+                <div class="col align-self-center">
+                    <p>&copy; 2023 MyItinerary &middot; <a href="./terms.html" class="link">Termos e Condições</a> &middot; <a href="./policies.html" class="link">Política de Privacidade e Cookies</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cookies-consent alert alert-primary alert-dismissible fade fixed-bottom" id="cookie-alert" role="alert">
+        <div class="row d-flex align-items-center justify-content-between">
+            <div class="col-12 col-md-auto">
+                <p>Ao utilizar o MyItinerary, está a consentir com a nossa <a href="./policies.html#cookies" class="link">Política de Cookies</a>.</p>
+            </div>
+            <div class="col-12 col-md-auto mt-3 mt-md-0 ms-md-2">
+                <button onclick="SetCookieConsent()" type="button" class="btn btn-primary" data-bs-dismiss="alert" aria-label="Close">Entendido!</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="./js/jquery/jquery-3.5.1.min.js"></script>
+    <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
