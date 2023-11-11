@@ -84,7 +84,7 @@ p {
 }
 .sidebar-wrapper .contact-list .svg-inline--fa {
   margin-right: 5px;
-  font-size: 18px;
+  font-size: 14px;
   vertical-align: middle;
 }
 .sidebar-wrapper .contact-list li {
@@ -93,11 +93,8 @@ p {
 .sidebar-wrapper .contact-list li:last-child {
   margin-bottom: 0;
 }
-.sidebar-wrapper .contact-list .email .svg-inline--fa {
-  font-size: 14px;
-}
-.sidebar-wrapper .contact-list .location {
-  margin-bottom: 26px;
+.sidebar-wrapper .contact-list .margin {
+  margin-bottom: 28px;
 }
 .sidebar-wrapper .container-block {
   padding: 30px;
@@ -192,7 +189,13 @@ p {
 .main-wrapper .section {
   margin-bottom: 60px;
 }
+.main-wrapper .experiences-section {
+  margin-bottom: 0px;
+}
 .main-wrapper .experiences-section .item {
+  margin-bottom: 30px;
+}
+.main-wrapper .education-section .item {
   margin-bottom: 30px;
 }
 .main-wrapper .upper-row {
@@ -234,7 +237,6 @@ p {
 .main-wrapper .projects-section .item {
   margin-bottom: 15px;
 }
-
 .skillset .item {
   margin-bottom: 15px;
   overflow: hidden;
