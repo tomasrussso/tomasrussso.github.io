@@ -96,6 +96,9 @@ p {
 .sidebar-wrapper .contact-list .email .svg-inline--fa {
   font-size: 14px;
 }
+.sidebar-wrapper .contact-list .location {
+  margin-bottom: 26px;
+}
 .sidebar-wrapper .container-block {
   padding: 30px;
 }
@@ -214,6 +217,11 @@ p {
   margin-bottom: 10px;
   color: #97AAC3;
 }
+
+.company a {
+  color: #97AAC3;
+}
+
 .main-wrapper .project-title {
   font-size: 16px;
   font-weight: 400;
@@ -264,6 +272,12 @@ p {
 .summary p {
   margin-bottom: 0.5rem;
 }
+
+.details p {
+  margin-bottom: 0.6rem;
+}
+
+
 
 @media (max-width: 767.98px) {
   .sidebar-wrapper {
