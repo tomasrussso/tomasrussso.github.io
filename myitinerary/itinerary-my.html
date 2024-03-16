@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fim de semana na Invicta - MyItinerary</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <meta name="author" content="Tomás Russo">
+    <meta name="description" content="Explore o itinerário de Tomás Russo no MyItinerary">
+    <meta name="theme-color" content="#40916c">
+
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;450;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="./css/fontawesome/css/all.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/main.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/dropdown.min.css" integrity="sha512-YYS7fyqDxVE/yJ1280i8KjA+nC7wAtv2u/qkulKbdMpmp8DBWX0Wj+HtILsFyvq+fouCwCyr0hasPAz1eBlvwA==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/transition.min.css" integrity="sha512-5StPzJo8hFyTvXfJ31FMB37EXRMVeUg+J3yvUNOJcL83MEMr7VrhZSNsoL3GDmUDBGBBhoTjnJx0Ql7cH9LY7g==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/label.min.css" integrity="sha512-bLGTFSFKewLG/ltHL52mMtuviUCuHlohn0410iUawDPbjvAONDt0yZ6vLkXfiFOIS9LxPqknEp2K76gBaMq9Bg==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/icon.min.css" integrity="sha512-8Tb+T7SKUFQWOPIQCaLDWWe1K/SY8hvHl7brOH8Nz5z1VT8fnf8B+9neoUzmFY3OzkWMMs3OjrwZALgB1oXFBg==" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Menu -->
+    <div class="menu menu-white">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-auto logo align-self-center">
+                    <a href="index.html"><img src="./images/logo-preto.svg" alt="MyItinerary" height="36px"></a>
+                </div>
+                <div class="col-auto options">
+                    <nav>
+                        <ul>
+                            <li class="d-flex align-items-center">
+                                <p class="d-flex d-sm-none"><i class="fas fa-bars"></i></p><p class="d-none d-sm-inline">Tomás Russo</p>
+                                <div class="dropdown">
+                                    <a href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" title="Opções">
+                                        <img class="profile-pic" src="./images/profile.jpg" alt="Tomás Russo">
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
+                                        <li><a class="dropdown-item" href="#createItinerary" data-bs-toggle="modal" data-bs-target="#createItinerary">Criar um novo itinerário</a></li>
+                                        <div class="dropdown-divider"></div>
+                                        <li><a class="dropdown-item" href="profile.html">Perfil</a></li>
+                                        <li><a class="dropdown-item" href="profile.html">Os meus itinerários</a></li>
+                                        <li><a class="dropdown-item" href="profile.html">Favoritos</a></li>
+                                        <div class="dropdown-divider"></div>
+                                        <li><a class="dropdown-item" href="help.html">Ajuda</a></li>
+                                        <li><a class="dropdown-item" href="profile.html">Definições</a></li>
+                                        <div class="dropdown-divider"></div>
+                                        <li>
+                                            <button class="dropdown-item">Terminar sessão</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="itinerary-page">
+        <div class="header" style="background-image: url(./images/background-dark.png), url(./images/porto5.jpg);">
+            <div class="container">
+                <div class="row align-items-end">
+                    <div class="col">
+                        <h1>Fim de semana na Invicta</h1>
+                        <h4><i class="fas fa-users" title="Visibilidade"></i>Público&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-calendar-alt" title="Duração"></i>2 dias&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-map-marker-alt" title="Cidades"></i>Porto</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="itin-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-9 main-content">
+                        <div class="row description">
+                            <h3>Sobre</h3>
+                            <p>O roteiro perfeito para 2 dias na cidade do Porto!</p>
+                            <!-- <p>Descrição</p> -->
+                        </div>
+                        <div class="row author align-items-center">
+                            <div class="col-auto">
+                                <a href="./profile.html" title="Tomás Russo" class="link"><img src="./images/profile.jpg" alt="Tomás Russo"></a>
+                            </div>
+                            <div class="col-auto author-date">
+                                <p><a href="./profile.html" class="link"><span class="name">Tomás Russo (Eu)</span></a><i style="font-size: 0.8rem; margin-left: 6px; color: #212529;" class="fas fa-check-circle mt-2" title="Perfil verificado"></i><br>20/06/2023 10:45</p>
+                            </div>
+                        </div>
+                        <div class="row buttons">
+                            <div class="col">
+                                <a href="./itinerary-edit.html" class="btn btn-primary"><i class="fas fa-pen"></i>Editar</a>
+                                <button onclick="CopyUrlToClipboard()" class="btn btn-secondary"><i class="fas fa-share-alt"></i>Partilhar</button>
+                                <!-- <a href="#" class="btn btn-secondary"><i class="fas fa-sync-alt"></i>Personalizar</a> -->
+                                <a href="#options" class="btn btn-white d-inline-block d-lg-none"><i class="fas fa-bars"></i>Opções</a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row itinerary">
+                            <h4 class="divider" id="divider"><i class="fas fa-chevron-down" id="icon"></i><a onclick="ChangeArrow(this)" class="link" data-bs-toggle="collapse" href="#day-1" role="button" aria-expanded="false" aria-controls="day-1">Dia 1</a></h4>
+                            <div class="collapse show" id="day-1">
+                                <p>Começamos a nossa viagem pela Avenida dos Aliados. Facilmente acessível de metro desde o aeroporto, esta praça emblemática é imagem de marca da cidade.</p>
+                                <div class="card local">
+                                    <div class="row">
+                                        <div class="col-md-3 align-self-center">
+                                            <a href="https://www.google.com/maps/place/Av.+dos+Aliados,+Porto/@41.1483616,-8.6112138,17.88z/data=!4m6!3m5!1s0xd2464e35940fd8f:0x738dcce6546dd210!8m2!3d41.1483096!4d-8.6108148!16s%2Fg%2F1210gshk?entry=ttu" target="_blank"><img class="img-fluid" src="./images/aliados.jpg" alt="Avenida dos Aliados"></a>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <div class="card-body">
+                                                <a href="https://www.google.com/maps/place/Av.+dos+Aliados,+Porto/@41.1483616,-8.6112138,17.88z/data=!4m6!3m5!1s0xd2464e35940fd8f:0x738dcce6546dd210!8m2!3d41.1483096!4d-8.6108148!16s%2Fg%2F1210gshk?entry=ttu" class="link" target="_blank"><h5 class="card-title">Avenida dos Aliados</h5></a>
+                                                <p class="card-text review"><span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span><a href="https://www.google.com/maps/place/Av.+dos+Aliados,+Porto/@41.1483616,-8.6112138,17.88z/data=!4m6!3m5!1s0xd2464e35940fd8f:0x738dcce6546dd210!8m2!3d41.1483096!4d-8.6108148!16s%2Fg%2F1210gshk?entry=ttu" class="link" target="_blank">4,6 no Google</a></p>
+                                                <p class="card-text">Trajeto majestoso conhecido pela arquitetura</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>Seguimos depois em direção à Ribeira. Pelo caminho, aproveitamos por visitar a famosa Estação de São Bento.</p>
+                                <div class="card local">
+                                    <div class="row">
+                                        <div class="col-md-3 align-self-center">
+                                            <a href="https://www.google.com/maps/place/S%C3%A3o+Bento/@41.1460798,-8.6114263,17z/data=!4m6!3m5!1s0xd2464e4756ff947:0x124f921e49a8773e!8m2!3d41.145492!4d-8.609544!16s%2Fm%2F04cslzm?entry=ttu" target="_blank"><img class="img-fluid" src="./images/sao-bento.jpg" alt="Estação de São Bento"></a>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <div class="card-body">
+                                                <a href="https://www.google.com/maps/place/S%C3%A3o+Bento/@41.1460798,-8.6114263,17z/data=!4m6!3m5!1s0xd2464e4756ff947:0x124f921e49a8773e!8m2!3d41.145492!4d-8.609544!16s%2Fm%2F04cslzm?entry=ttu" class="link" target="_blank"><h5 class="card-title">Estação de São Bento</h5></a>
+                                                <p class="card-text review"><span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span><a href="https://www.google.com/maps/place/S%C3%A3o+Bento/@41.1460798,-8.6114263,17z/data=!4m6!3m5!1s0xd2464e4756ff947:0x124f921e49a8773e!8m2!3d41.145492!4d-8.609544!16s%2Fm%2F04cslzm?entry=ttu" class="link" target="_blank">4,7 no Google</a></p>
+                                                <p class="card-text">Estação do século XIX com azulejos ornados</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>Depois de visitada a estação, seguimos até à Ponte Luiz I. Atravessamos para a margem oposta e aproveitamos a vista para a cidade a partir de Vila Nova de Gaia.</p>
+                                <div class="image col-12 col-md-6">
+                                    <img class="img-fluid" src="./images/porto4.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <h4 class="divider" id="divider"><i class="fas fa-chevron-down" id="icon"></i><a onclick="ChangeArrow(this)" class="link" data-bs-toggle="collapse" href="#day-2" role="button" aria-expanded="false" aria-controls="day-2">Dia 2</a></h4>
+                            <div class="collapse show" id="day-2">
+                                <p>Depois de recuperados das íngremes ruas da cidade, aproveitamos a manhã para fazer algumas compras na emblemática Rua de Santa Catarina. Lá próximo, sendo também local para compras, está o típico e recentemente renovado Mercado do Bolhão.</p>
+                                <div class="card local">
+                                    <div class="row">
+                                        <div class="col-md-3 align-self-center">
+                                            <a href="https://www.google.com/maps/place/Mercado+do+Bolh%C3%A3o/@41.1472905,-8.6075324,16.82z/data=!3m1!5s0xd2464fab1e98dd5:0x2b04eabf20145859!4m6!3m5!1s0xd2464e525d70c15:0xf17622db196e7ce9!8m2!3d41.1487813!4d-8.6073608!16s%2Fg%2F1vgw9xlm?entry=ttu" target="_blank"><img class="img-fluid" src="./images/bolhao.jpg" alt="Mercado do Bolhão"></a>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <div class="card-body">
+                                                <a href="https://www.google.com/maps/place/Mercado+do+Bolh%C3%A3o/@41.1472905,-8.6075324,16.82z/data=!3m1!5s0xd2464fab1e98dd5:0x2b04eabf20145859!4m6!3m5!1s0xd2464e525d70c15:0xf17622db196e7ce9!8m2!3d41.1487813!4d-8.6073608!16s%2Fg%2F1vgw9xlm?entry=ttu" class="link" target="_blank"><h5 class="card-title">Mercado do Bolhão</h5></a>
+                                                <p class="card-text review"><span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></span><a href="https://www.google.com/maps/place/Mercado+do+Bolh%C3%A3o/@41.1472905,-8.6075324,16.82z/data=!3m1!5s0xd2464fab1e98dd5:0x2b04eabf20145859!4m6!3m5!1s0xd2464e525d70c15:0xf17622db196e7ce9!8m2!3d41.1487813!4d-8.6073608!16s%2Fg%2F1vgw9xlm?entry=ttu" class="link" target="_blank">4,3 no Google</a></p>
+                                                <p class="card-text">Mercado icónico com muitos vendedores</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>Para o lanche, não pode faltar o famoso Pastel de Nata.</p>
+                                <div class="image col-12 col-md-6">
+                                    <img class="img-fluid" src="./images/natas.jpg" alt="">
+                                </div>
+                                <p>Terminamos o dia com uma típica iguaria portuense, a famosa Francesinha na Taberna Yuko.</p>
+                                <div class="card local">
+                                    <div class="row">
+                                        <div class="col-md-3 align-self-center">
+                                            <a href="https://www.google.com/maps/place/Yuko+Tavern/@41.1770214,-8.5842999,17.52z/data=!4m6!3m5!1s0xd2464596c3e8d8d:0x93583f8a0479050e!8m2!3d41.1763333!4d-8.5856964!16s%2Fg%2F11b7ft4zc5?entry=ttu" target="_blank"><img class="img-fluid" src="./images/yuko.jpg" alt="Yuko Tavern"></a>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <div class="card-body">
+                                                <a href="https://www.google.com/maps/place/Yuko+Tavern/@41.1770214,-8.5842999,17.52z/data=!4m6!3m5!1s0xd2464596c3e8d8d:0x93583f8a0479050e!8m2!3d41.1763333!4d-8.5856964!16s%2Fg%2F11b7ft4zc5?entry=ttu" class="link" target="_blank"><h5 class="card-title">Yuko Tavern</h5></a>
+                                                <p class="card-text review"><span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span><a href="https://www.google.com/maps/place/Yuko+Tavern/@41.1770214,-8.5842999,17.52z/data=!4m6!3m5!1s0xd2464596c3e8d8d:0x93583f8a0479050e!8m2!3d41.1763333!4d-8.5856964!16s%2Fg%2F11b7ft4zc5?entry=ttu" class="link" target="_blank">4,5 no Google</a></p>
+                                                <p class="card-text">Restaurante típico</p>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="d-block d-lg-none">
+                    </div>
+                    <div class="col-12 col-lg-3 itin-explore" id="options">
+                        <!-- INICIO DO ANUNCIO -->
+                        <!-- <div class="row mb-4 mt-2 mt-lg-0">
+                            <img src="./images/image.jpg" alt="" class="img-fluid">
+                            <p class="m-0 mt-1">Publicidade</p>
+                        </div> -->
+                        <!-- FIM DO ANUNCIO -->
+                        <div class="row">
+                            <h3>Opções</h3>
+                        </div>
+                        <div class="row options-menu" style="margin-bottom: 18px;">
+                            <ul>
+                                <a href="#changeTitle" data-bs-toggle="modal" data-bs-target="#changeTitle" class="option"><li><i class="fas fa-edit"></i>Alterar o título</li></a>
+                                <a href="#changeDescription" data-bs-toggle="modal" data-bs-target="#changeDescription" class="option"><li><i class="fas fa-align-left"></i>Editar a descrição</li></a>
+                                <a href="#changeWallpaper" data-bs-toggle="modal" data-bs-target="#changeWallpaper" class="option"><li><i class="fas fa-image"></i>Trocar foto de capa</li></a>
+                                <button type="submit" class="btn option shadow-none"><li class="mt-3 text-start"><i class="fas fa-lock"></i>Tornar privado</li></button>
+                                <a href="#deleteItinerary" data-bs-toggle="modal" data-bs-target="#deleteItinerary" class="option"><li class="mt-3 del"><i class="fas fa-trash-alt"></i>Eliminar o itinerário</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row justify-content-start">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5>A Minha Conta</h5>
+                    <ul>
+                        <li><a href="./login.html">Iniciar Sessão</a></li>
+                        <li><a href="./signin.html">Registar-me</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5>Explorar</h5>
+                    <ul>
+                        <li><a href="./explore.html">Explorar Itinerários</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <h5>Centro de Ajuda</h5>
+                    <ul>
+                        <li><a href="./help.html#about">O que é o MyItinerary?</a></li>
+                        <li><a href="./help.html#how-it-works">Como funciona o MyItinerary?</a></li>
+                        <li><a href="./help.html#faq">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row logo">
+                <div class="col align-self-center">
+                    <p>&copy; 2023 MyItinerary &middot; <a href="./terms.html" class="link">Termos e Condições</a> &middot; <a href="./policies.html" class="link">Política de Privacidade e Cookies</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cookies-consent alert alert-primary alert-dismissible fade fixed-bottom" id="cookie-alert" role="alert">
+        <div class="row d-flex align-items-center justify-content-between">
+            <div class="col-12 col-md-auto">
+                <p>Ao utilizar o MyItinerary, está a consentir com a nossa <a href="./policies.html#cookies" class="link">Política de Cookies</a>.</p>
+            </div>
+            <div class="col-12 col-md-auto mt-3 mt-md-0 ms-md-2">
+                <button onclick="SetCookieConsent()" type="button" class="btn btn-primary" data-bs-dismiss="alert" aria-label="Close">Entendido!</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal - Trocar titulo -->
+    <div class="modal fade" id="changeTitle" tabindex="-1" aria-labelledby="changeTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row text-center">
+                        <h1>Alterar o título</h1>
+                        <p>Escolha o título que será apresentado junto do seu itinerário.</p>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-auto">
+                                <label for="title" style="margin-bottom: 8px;">Título</label>
+                                <input type="text" placeholder="Escolha o título do itinerário" name="title" id="title" required  value="Fim de Semana na Invicta">
+                                <div class="text-center btns">
+                                    <button type="button" class="btn btn-white cancel" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                                    <button id="btn-submit-title" type="submit" class="btn btn-primary d-inline-flex align-items-center justify-content-center" onclick="SetLoading(this, document.getElementById('title'))">Alterar título</button>
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal - Trocar descricao -->
+    <div class="modal fade" id="changeDescription" tabindex="-1" aria-labelledby="changeDescription" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row text-center">
+                        <h1>Editar descrição</h1>
+                        <p>Escolha uma descrição que caracterize o seu itinerário.</p>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-auto">
+                                <label for="description" style="margin-bottom: 8px;">Descrição</label>
+                                <textarea cols="26" rows="3" placeholder="Descreva o seu itinerário..." name="description" id="description">O roteiro perfeito para 2 dias na cidade do Porto!</textarea>
+                                <div class="text-center btns">
+                                    <button type="button" class="btn btn-white cancel" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                                    <button id="btn-submit-description" type="submit" class="btn btn-primary d-inline-flex align-items-center justify-content-center" onclick="SetLoading(this)">Editar descrição</button>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal - Trocar foto capa -->
+    <div class="modal fade" id="changeWallpaper" tabindex="-1" aria-labelledby="changeWallpaper" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row text-center">
+                        <h1>Trocar foto de capa</h1>
+                        <p>Selecione a imagem que pretende usar como foto de capa.</p>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-auto">
+                                <label for="wallpaper" style="margin-bottom: 8px;">Foto de capa</label>
+                                <input type="file" name="wallpaper" id="wallpaper" accept="image/*" required>
+                                <div class="text-center btns">
+                                    <button type="button" class="btn btn-white cancel" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                                    <button id="btn-submit-wallpaper" type="submit" class="btn btn-primary d-inline-flex align-items-center justify-content-center" onclick="SetLoading(this, document.getElementById('wallpaper'))">Trocar foto</button>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal - Apagar itinerario -->
+    <div class="modal fade" id="deleteItinerary" tabindex="-1" aria-labelledby="deleteItinerary" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row text-center">
+                        <h1>Apagar este itinerário?</h1>
+                        <p class="mb-0">Está prestes a apagar um itinerário completo!<br>Depois de continuar, não poderá voltar atrás. Pretende prosseguir?</p>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-auto">
+                                <div class="text-center btns">
+                                    <button type="button" class="btn btn-white cancel" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                                    <button id="btn-submit-delete" type="submit" class="btn btn-danger d-inline-flex align-items-center justify-content-center" onclick="SetLoading(this)">Sim, eliminar o itinerário :(</button>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="position-fixed top-0 start-50 translate-middle-x pt-3" style="z-index: 1001">
+        <div id="toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                </div>
+                <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="./js/jquery/jquery-3.5.1.min.js"></script>
+    <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+
+    <!-- Modal - Criar itinerário -->
+<div class="modal fade" id="createItinerary" tabindex="-1" aria-labelledby="createItinerary" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row text-center">
+                    <h1>Criar um novo itinerário</h1>
+                    <p>Antes de começar, defina algumas informações básicas sobre o seu itinerário.</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-auto">
+                            <label for="title">Título</label> <br>
+                            <input type="text" id="itin-title" name="title" placeholder="Dê um nome ao seu itinerário" onclick="RemoveError(this)" required> <br>
+
+                            <label for="duration">Duração da viagem</label> <br>
+                            <input type="number" id="duration" name="duration" placeholder="Máximo de 30 dias" onclick="RemoveError(this)" required> <br>
+
+                            <label for="locations">Cidades</label> <br>
+                            <select class="ui fluid search dropdown" multiple id="locations" name="locations[]"> 
+                                <option value="">Escolha até 8 cidades</option>
+                                <option value="1">Porto</option>
+                                <option value="2">Lisboa</option>
+                                <option value="3">Braga</option>
+                                <option value="4">Coimbra</option>
+                                <option value="5">Faro</option>
+                                <option value="6">Aveiro</option>
+                                <option value="7">Viana do Castelo</option>
+                                <option value="8">Vila Real</option>
+                                <option value="9">Viseu</option>
+                                <option value="10">Évora</option>
+                                <option value="11">Guarda</option>
+                                <option value="12">Leiria</option>
+                                <option value="13">Santarém</option>
+                                <option value="14">Setúbal</option>
+                                <option value="15">Beja</option>
+                                <option value="16">Castelo Branco</option>
+                                <option value="17">Portalegre</option>
+                                <option value="18">Bragança</option>
+                            </select>
+                            <div class="text-center btns" style="margin-top: 38px;">
+                                <button type="button" class="btn btn-white cancel" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                                <button id="btn-submit" type="submit" class="btn btn-primary d-inline-flex align-items-center justify-content-center" onclick="SetLoading(this, document.getElementById('itin-title'), document.getElementById('duration'))">Começar a criar!</button>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/dropdown.min.js" integrity="sha512-8F/2JIwyPohlMVdqCmXt6A6YQ9X7MK1jHlwBJv2YeZndPs021083S2Z/mu7WZ5g0iTlGDYqelA9gQXGh1F0tUw==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/transition.min.js" integrity="sha512-MCuLP92THkMwq8xkT2cQg5YpF30l3qzJuBRf/KsbQP1czFkRYkr2dSkCHmdJETqVmvIq5Y4AOVE//Su+cH+8QA==" crossorigin="anonymous"></script>
+<script>
+    $('.ui.dropdown').dropdown({
+        maxSelections: 8,
+        message: {
+            count: '{count} selecionados',
+            maxSelections: 'Apenas pode adicionar {maxCount} cidades',
+            noResults: 'Sem resultados'
+        },
+        direction: 'upward'
+    });
+
+    $( "#createItinerary" ).on('shown.bs.modal', function(){
+        width = document.getElementById('duration').offsetWidth;
+        document.querySelector('div.ui.dropdown').setAttribute("style", "width: " + width + "px");
+    });    
+
+    var windowWidth = $(window).width();
+    $(window).on('resize', function() {
+        if ($(this).width() !== windowWidth) {
+            width = document.getElementById('duration').offsetWidth;
+            document.querySelector('div.ui.dropdown').setAttribute("style", "width: " + width + "px");
+        }
+    });
+</script>
+</body>
+</html>
