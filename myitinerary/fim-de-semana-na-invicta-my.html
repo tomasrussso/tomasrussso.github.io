@@ -56,7 +56,7 @@
                                         <li><a class="dropdown-item" href="profile.html">Definições</a></li>
                                         <div class="dropdown-divider"></div>
                                         <li>
-                                            <button class="dropdown-item">Terminar sessão</button>
+                                            <a href="./fim-de-semana-na-invicta.html" class="dropdown-item">Terminar sessão</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -98,7 +98,7 @@
                         </div>
                         <div class="row buttons">
                             <div class="col">
-                                <a href="./itinerary-edit.html" class="btn btn-primary"><i class="fas fa-pen"></i>Editar</a>
+                                <a href="./fim-de-semana-na-invicta-edit.html" class="btn btn-primary"><i class="fas fa-pen"></i>Editar</a>
                                 <button onclick="CopyUrlToClipboard()" class="btn btn-secondary"><i class="fas fa-share-alt"></i>Partilhar</button>
                                 <!-- <a href="#" class="btn btn-secondary"><i class="fas fa-sync-alt"></i>Personalizar</a> -->
                                 <a href="#options" class="btn btn-white d-inline-block d-lg-none"><i class="fas fa-bars"></i>Opções</a>
@@ -273,7 +273,7 @@
                                 <input type="text" placeholder="Escolha o título do itinerário" name="title" id="title" required  value="Fim de Semana na Invicta">
                                 <div class="text-center btns">
                                     <button type="button" class="btn btn-white cancel" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
-                                    <button id="btn-submit-title" type="submit" class="btn btn-primary d-inline-flex align-items-center justify-content-center" onclick="SetLoading(this, document.getElementById('title'))">Alterar título</button>
+                                    <button id="btn-submit-title" data-bs-dismiss="modal" class="btn btn-primary d-inline-flex align-items-center justify-content-center" onclick="SetLoading(this, document.getElementById('title'))">Alterar título</button>
                                 </div>
                             
                         </div>
@@ -303,7 +303,7 @@
                                 <textarea cols="26" rows="3" placeholder="Descreva o seu itinerário..." name="description" id="description">O roteiro perfeito para 2 dias na cidade do Porto!</textarea>
                                 <div class="text-center btns">
                                     <button type="button" class="btn btn-white cancel" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
-                                    <button id="btn-submit-description" type="submit" class="btn btn-primary d-inline-flex align-items-center justify-content-center" onclick="SetLoading(this)">Editar descrição</button>
+                                    <button id="btn-submit-description" data-bs-dismiss="modal" class="btn btn-primary d-inline-flex align-items-center justify-content-center" onclick="SetLoading(this)">Editar descrição</button>
                                 </div>
                         </div>
                     </div>
@@ -332,7 +332,7 @@
                                 <input type="file" name="wallpaper" id="wallpaper" accept="image/*" required>
                                 <div class="text-center btns">
                                     <button type="button" class="btn btn-white cancel" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
-                                    <button id="btn-submit-wallpaper" type="submit" class="btn btn-primary d-inline-flex align-items-center justify-content-center" onclick="SetLoading(this, document.getElementById('wallpaper'))">Trocar foto</button>
+                                    <button id="btn-submit-wallpaper" data-bs-dismiss="modal" class="btn btn-primary d-inline-flex align-items-center justify-content-center" onclick="SetLoading(this, document.getElementById('wallpaper'))">Trocar foto</button>
                                 </div>
                         </div>
                     </div>
@@ -359,7 +359,7 @@
                         <div class="col-auto">
                                 <div class="text-center btns">
                                     <button type="button" class="btn btn-white cancel" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
-                                    <button id="btn-submit-delete" type="submit" class="btn btn-danger d-inline-flex align-items-center justify-content-center" onclick="SetLoading(this)">Sim, eliminar o itinerário :(</button>
+                                    <button id="btn-submit-delete" data-bs-dismiss="modal" class="btn btn-danger d-inline-flex align-items-center justify-content-center" onclick="SetLoading(this)">Sim, eliminar o itinerário :(</button>
                                 </div>
                         </div>
                     </div>
@@ -464,6 +464,14 @@
             document.querySelector('div.ui.dropdown').setAttribute("style", "width: " + width + "px");
         }
     });
+</script>
+
+<script>
+    // Delay 2 seconds
+    setTimeout(function() {
+        // Show the toast
+        LaunchToast("Agora pode editar este itinerário, clicando no botão 'Editar'!");
+    }, 1000);
 </script>
 </body>
 </html>

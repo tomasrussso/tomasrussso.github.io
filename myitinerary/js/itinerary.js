@@ -22,7 +22,7 @@ SetTextareas();
 
 function SaveAndExit() {
   hasEdited = false;
-  window.location.href = "itinerary-my.html";
+  window.location.href = "fim-de-semana-na-invicta-my.html";
 }
 
 // Remover elemento pelo ID (todos)
