@@ -89,7 +89,7 @@
             </div>
             <div class="row logo">
                 <div class="col align-self-center">
-                    <p>&copy; 2023 MyItinerary &middot; <a href="./terms.html" class="link">Termos e Condições</a> &middot; <a href="./policies.html" class="link">Política de Privacidade e Cookies</a></p>
+                    <p>&copy; <span id="year">2023</span> MyItinerary &middot; <a href="./terms.html" class="link">Termos e Condições</a> &middot; <a href="./policies.html" class="link">Política de Privacidade e Cookies</a></p>
                 </div>
             </div>
         </div>
@@ -110,5 +110,10 @@
     <script src="./js/jquery/jquery-3.5.1.min.js"></script>
     <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="./js/main.js"></script>
+
+    <script>
+        // Footer year
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
 </body>
 </html>
