@@ -78,7 +78,7 @@ ul li {
   font-weight: 700;
   line-height: 1.1;
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 .sidebar-wrapper .tagline {
   color: rgba(255, 255, 255, 0.6);
@@ -105,7 +105,7 @@ ul li {
   margin-bottom: 28px;
 }
 .sidebar-wrapper .container-block {
-  padding: 30px;
+  padding: 40px 30px;
 }
 .sidebar-wrapper .container-block-title {
   text-transform: uppercase;
@@ -157,6 +157,9 @@ ul li {
 }
 .sidebar-wrapper .interests-list li:last-child {
   margin-bottom: 0;
+}
+.sidebar-wrapper .languages-container {
+  padding-top: 0px;
 }
 
 .main-wrapper {
@@ -295,7 +298,7 @@ ul li {
     width: inherit;
   }
   .main-wrapper {
-    padding: 30px;
+    padding: 40px 30px;
   }
   .main-wrapper .time {
     position: static;
