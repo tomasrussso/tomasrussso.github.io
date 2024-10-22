@@ -1,6 +1,6 @@
 var cookieAlert = document.getElementById("cookie-alert");
 
-if (GetCookieValue("cookie_consent") != "consent") {
+if (GetCookieValue("cookies_consent") != "consent") {
   setTimeout(function () {
     cookieAlert.classList.add("show");
   }, 1500);
@@ -66,7 +66,7 @@ function GetCookieValue(name) {
 }
 
 function SetCookieConsent() {
-  SetCookie("cookie_consent", "consent", 365 * 5);
+  SetCookie("cookies_consent", "consent", 1);
 }
 
 function CopyUrlToClipboard() {
