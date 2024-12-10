@@ -161,6 +161,9 @@ ul li {
 .sidebar-wrapper .languages-container {
   padding-top: 0px;
 }
+.sidebar-wrapper .education-container {
+  padding-top: 0px;
+}
 
 .main-wrapper {
   background: #fff;
@@ -200,14 +203,11 @@ ul li {
 .main-wrapper .section {
   margin-bottom: 60px;
 }
-.main-wrapper .education-section {
-  margin-bottom: 0px;
-}
 .main-wrapper .experiences-section .item {
   margin-bottom: 30px;
 }
-.main-wrapper .education-section .item {
-  margin-bottom: 25px;
+.main-wrapper .experiences-section {
+  margin-bottom: 0px;
 }
 .main-wrapper .upper-row {
   position: relative;
